@@ -1,0 +1,36 @@
+
+<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="imageselect.js"></script>
+
+<link href="imageselect.css" media="screen" rel="stylesheet" type="text/css" />
+<div class="contents row">
+<div class="container">
+  <%= form_tag('/tweets', method: :post) do %>
+    <h3>
+      投稿しますよォォ
+    </h3>
+
+    <body>
+
+    <select name="logo">
+    
+    <option value="1">笑顔</option>
+    <option value="2">白目</option>
+    <option value="3">ブチ切れ</option>
+    <option value="4">お風呂</option>
+    </select>
+    
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+     $('select[name=logo]').ImageSelect({dropdownWidth:425});
+     });
+    
+    
+    </script>
+    </body>
+    <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
+    <input type="submit" value="SENT">
+  <% end %>
+  </div>
+</div>
